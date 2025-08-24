@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".QuizQuestionActivity">
+    tools:context=".QuizQuestionsFragment">
 
 
     <LinearLayout
@@ -66,51 +66,56 @@
 
     </LinearLayout>
 
-        <TextView
-            android:background="@drawable/default_option_border_bg"
-            android:id="@+id/tv_option_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:padding="15dp"
-            android:textSize="18dp"
-            android:textColor="#7A8089"
-         tools:text="Nigeria"/>
 
-        <TextView
-            android:background="@drawable/default_option_border_bg"
-            android:id="@+id/tv_option_two"
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/mtg_select_flag"
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:padding="15dp"
-            android:textSize="18dp"
-            android:textColor="#7A8089"
-          tools:text="Ghana"/>
-        <TextView
-            android:background="@drawable/default_option_border_bg"
-            android:id="@+id/tv_option_three"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:padding="15dp"
-            android:textSize="18dp"
-            android:textColor="#7A8089"
-            tools:text="Gabon"/>
-        <TextView
-            android:id="@+id/tv_option_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:padding="15dp"
-            android:textSize="18dp"
-            android:textColor="#7A8089"
-            android:background="@drawable/default_option_border_bg"
-            tools:text="Madagascar"/>
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            android:orientation="vertical"
+
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_option_one"
+                android:backgroundTint="@color/button_bgrnd"
+                app:rippleColor="@color/button_bgrnd"
+                android:textColor="@color/button_bgrnd_text_color"
+                android:layout_width="wrap_content"
+                android:text="Ghana"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_option_two"
+                android:backgroundTint="@color/button_bgrnd"
+                app:rippleColor="@color/button_bgrnd"
+                android:textColor="@color/button_bgrnd_text_color"
+                android:layout_width="wrap_content"
+                android:text="Nigeria"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_option_three"
+                android:backgroundTint="@color/button_bgrnd"
+                app:rippleColor="@color/button_bgrnd"
+                android:textColor="@color/button_bgrnd_text_color"
+                android:layout_width="wrap_content"
+                android:text="Netherlands"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_option_four"
+                android:backgroundTint="@color/button_bgrnd"
+                app:rippleColor="@color/button_bgrnd"
+                android:textColor="@color/button_bgrnd_text_color"
+                android:layout_width="wrap_content"
+                android:text="Oman"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
         <Button
             android:id="@+id/btn_submit"
             android:layout_width="match_parent"
