@@ -17,4 +17,11 @@
 
     </style>
     <style name="Theme.FlagGame" parent="Base.Theme.FlagGame" />
+
+
+    <style name="selectButton" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="background">@color/button_bgrnd</item>
+<!--        <item name="backgroundTint">@android:color/transparent</item>-->
+<!--        <item name="checked">@color/colorPrimaryDark</item>-->
+    </style>
 </resources>

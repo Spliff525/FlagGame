@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.flaggame.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_quizQuestionsFragment"
+            app:destination="@id/quizQuestionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizQuestionsFragment"
+        android:name="com.example.flaggame.QuizQuestionsFragment"
+        android:label="fragment_quiz_question"
+        tools:layout="@layout/fragment_quiz_question">
+
+        <argument android:name="user_name" app:nullable="false" app:argType="string"/>
+        <action
+            android:id="@+id/action_quizQuestionsFragment_to_resultActivity"
+            app:destination="@id/resultActivity" />
+
+    </fragment>
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="com.example.flaggame.ResultActivity"
+        android:label="ResultActivity">
+
+        <argument android:name="resultData" app:nullable="false" app:argType="com.example.flaggame.ResultData" />
+
+    </activity>
+
+</navigation>
